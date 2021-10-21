@@ -1,0 +1,27 @@
+<div class="gv-grid" id="gv-grid">
+    {{#each cells}}
+    <div class="gv-grid-cell {{PublishClass}}" id="gv-grid-cell_{{Index}}" data-index="{{Index}}">
+        <div class="gv-grid-cell-inner" id="gv-grid-cell-inner_{{Index}}" data-index="{{Index}}">
+            <div class="gv-grid-cell-image-container">
+                <img class="gv-grid-cell-image gv-blazy" src="<%= path %>/assets/placeholder.png" data-src="{{Grid_image_src}}" />
+                <!-- <div class="gv-flag gv-grid-cell-flag gv-blazy" data-src="<%= path %>/assets/flags/pngs/{{Iso}}.png"></div> -->
+                <div class="image-arrow">
+                    <svg width="22" height="22" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.7498 0L11.2248 9.47497V10.475L1.7498 19.9499L0.799805 18.9749L8.14978 9.97497L0.799805 0.974997L1.7498 0ZM11.7498 0L21.2247 9.47497V10.475L11.7498 19.9499L10.7998 18.9749L18.1497 9.97497L10.7998 0.974997L11.7498 0Z"
+                            fill="#FFFFFF" />
+                    </svg>
+                </div>
+            </div>
+            <div class="gv-cell-info">
+                <div class="gv-cell-title">{{Name}}</div>
+                <div class="gv-cell-subtitle">{{{profession}}}</div>
+            </div>
+            <!-- INSERT CELL STUFF HERE -->
+        </div>
+    </div>
+    <!-- {{#each objArr}} 
+                        {{> detailItem }}
+                    {{/each}}  -->
+    {{/each}}
+</div>

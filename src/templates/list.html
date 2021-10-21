@@ -1,0 +1,52 @@
+    <div class="gv-list" id="gv-list">    
+            {{#each players}}
+            <div class="gv-list-entry {{PublishClass}}" id="list-entry_{{Index}}" data-index="{{Index}}">
+
+                    <div class="gv-list-entry-inner" id="gv-list-entry-inner_{{Index}}" data-index="{{Index}}">
+                            <div class="gv-list-entry-header">
+
+                                    <div class="gv-list-image-container">
+                                            <img class="gv-list-image gv-blazy" src="<%= path %>/assets/placeholder.png" data-src="{{List_image_src}}"/>
+                                    </div>
+
+                                    <div class="gv-list-title"><span class="gv-list-number">{{Rank}}</span><span class="gv-list-title-name">{{Name}}</span></div>
+                                    <div class="gv-list-entry-info">
+                                            <div class="gv-list-country gv-list-info-row"><span>Age</span><span>{{age}}</span></div>
+                                            <div class="gv-list-club gv-list-info-row"><span>Profession</span><span>{{profession}}</span></div>
+                                            <div class="gv-list-position gv-list-info-row"><span>Circumstances of arrest</span><span>{{circumstances}}</span></div>
+                                    </div>
+                            </div>
+                            <div class="gv-list-entry-body-text">
+                                <div class="gv-list-entry-description">{{{Profile}}} <strong>{{{Writer}}}</strong></div>
+                            </div>
+    
+                    </div>
+            </div>
+
+            {{#ifvalue Index 6}}
+                       
+            <div class="interactive-ad-banner">
+                        <div class="ad-wrapper--desktop hide-until-tablet">
+                            <div id="dfp-ad--inline{{Index}}"
+                                 class="js-ad-slot ad-slot ad-slot--banner-ad ad-slot--banner-ad-desktop"
+                                 data-link-name="ad slot banner"
+                                 data-name="banner"
+                                 data-tablet="1,1|2,2|728,90"
+                                 data-desktop="1,1|2,2|88,70|728,90|940,230|900,250"></div>
+                        </div>
+                    
+                        <div class="ad-wrapper--mobile mobile-only">
+                            <div id="dfp-ad--inline{{Index}}Mobile"
+                                 class="js-ad-slot ad-slot ad-slot--inline ad-slot--inline{{Index}}"
+                                 data-link-name="ad slot inline{{Index}}Mobile"
+                                 data-name="inline{{Index}}Mobile"
+                                 data-mobile="1,1|2,2|300,250|fluid"></div>
+                        </div>
+                    </div>
+
+
+
+            {{/ifvalue}}
+
+            {{/each}}
+     </div>

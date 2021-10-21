@@ -1,0 +1,58 @@
+    <div class="gv-list" id="gv-list">    
+            {{#each players}}
+            <div class="gv-list-entry {{PublishClass}}" id="list-entry_{{Index}}" data-index="{{Index}}">
+
+                    <div class="gv-list-entry-inner" id="gv-list-entry-inner_{{Index}}" data-index="{{Index}}">
+                            <div class="gv-list-entry-header">
+
+                                    <div class="gv-list-image-container">
+                                            <img class="gv-list-image gv-blazy" src="<%= path %>/assets/placeholder.png" data-src="{{List_image_src}}"/>
+                                            <!-- <img class="gv-list-image gv-blazy" src="<%= path %>/assets/placeholder.png" data-src="<%= path %>/assets/test-cutout.png"/> -->
+                                            <!-- <div class="gv-flag gv-list-image-flag gv-blazy" data-src="<%= path %>/assets/flags/pngs/{{Iso}}.png"></div> -->
+                                    </div>
+
+                                    <div class="gv-list-entry-info">
+                                            <div class="gv-list-title"><span class="gv-list-title-name">{{Name}}</span></div>
+                                                <div class="gv-list-pullquote">
+                                                        <p>
+                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 29"> <path d="M40.498.519c-1.062 8.967-2.243 18.052-2.714 27.728H21.737c1.77-9.676 4.837-18.76 10.147-27.728h8.614Zm-21.121 0c-1.18 8.967-2.36 18.052-2.832 27.728H.498C2.15 18.57 5.336 9.487 10.528.519h8.848Z" fill="#FFE500" /></svg>
+                                                                {{introQuote}}
+                                                        </p>
+                                                </div>
+                                            <!-- <div class="gv-list-country gv-list-info-row"><span>Age</span><span>{{Age}}</span></div> -->
+                                            
+                                    </div>
+                            </div>
+                            <div class="gv-list-entry-body-text">
+                                <div class="entry_meta">
+                                        <div class="gv-list-club gv-list-info-row"><span>Age</span> {{age}}</div>
+                                        <div class="gv-list-position gv-list-info-row"><span>Profession</span> {{{profession}}}</div>
+                                        <div class="gv-list-born gv-list-info-row"><span>Circumstances of arrest</span> {{{circumstances}}}</div>
+                                </div>
+                                <div class="gv-list-entry-description">{{{Description}}}</div>
+                            </div>
+    
+                    </div>
+            </div>
+
+            {{#ifvalue Index 6}}
+
+
+
+<div class="interactive-ad-banner">
+
+    <div class="ad-wrapper--desktop hide-until-tablet">
+        <div id="dfp-ad--{{Index}}" class="js-ad-slot ad-slot ad-slot--banner-ad ad-slot--banner-ad-desktop ad-slot--rendered" data-link-name="ad slot banner" data-name="banner" data-tablet="1,1|2,2|728,90" data-desktop="1,1|2,2|88,70|728,90|940,230|900,250|970,250"></div>
+    </div>
+    
+    <div class="ad-wrapper--mobile mobile-only">
+        <div id="dfp-ad--inline{{Index}}Mobile" class="js-ad-slot ad-slot ad-slot--inline ad-slot--inline{{Index}}" data-link-name="ad slot inline{{Index}}Mobile" data-name="inline{{Index}}Mobile" data-mobile="1,1|2,2|300,250|fluid"></div>
+    </div>
+
+</div>
+
+
+            {{/ifvalue}}
+
+            {{/each}}
+     </div>

@@ -1,0 +1,97 @@
+ {{#furniture}}
+<div class="gv-header-background">
+    <div class="gv-header-wrapper">
+        <div id="gv-header" class="gv-header">
+            <span class="gv-strap">{{{pagestrap}}}</span>
+            <h1>{{headline}}</h1>
+            <p class="gv-standfirst">{{{standfirst}}}</p>
+            <div class="gv-byline">{{byline}}</div>
+            <div class="gv-datestamp">{{datestamp}}</div>
+            <div class="header-share-container">
+                <button class="interactive-share" data-network="facebook" data-shareurl="{{shareurl}}"></button>
+                <button class="interactive-share" data-network="twitter" data-shareurl="{{shareurl}}"></button>
+                <button class="interactive-share" data-network="email" data-shareurl="{{shareurl}}"></button>
+            </div>
+        </div>
+        <svg version="1.1" id="gv-header-background-graphic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="504.5px" height="249px" x="0px" y="0px"
+     viewBox="0 0 504.5 249" style="enable-background:new 0 0 504.5 249;" xml:space="preserve">
+<g style="opacity:0.1;">
+    <path style="fill:#F4F4F4;" d="M47.5,14.2L0,25.8v-7.3L54.1,1.3H59v244.5H47.5V14.2z"/>
+    <path style="fill:#F4F4F4;" d="M110.4,130.2v-10.1C110.4,42.9,145.3,1,202.6,1c56.9,0,91.2,41.2,91.2,118.4v10.5
+        c0,77.2-33.9,119.1-91.5,119.1S110.4,206.7,110.4,130.2z M281.9,131.3V119c0-67.8-26.2-108.3-79.3-108.3c-53.4,0-80,40.2-80,107.9
+        v11.9c0,68.1,26.6,108.3,79.7,108.3C255.7,238.9,281.9,199.7,281.9,131.3z"/>
+    <path style="fill:#F4F4F4;" d="M321,130.2v-10.1C321,42.9,356,1,413.3,1c56.9,0,91.2,41.2,91.2,118.4v10.5
+        c0,77.2-33.9,119.1-91.5,119.1S321,206.7,321,130.2z M492.6,131.3V119c0-67.8-26.2-108.3-79.3-108.3c-53.4,0-80,40.2-80,107.9v11.9
+        c0,68.1,26.6,108.3,79.7,108.3C466.4,238.9,492.6,199.7,492.6,131.3z"/>
+</g>
+</svg>
+    </div>
+</div>
+{{/furniture}}
+<div id="gv-wrap-all" class="gv-wrap-all">
+    <div id="gv-mobile-dummy"></div>
+    <div class="gv-views-wrapper">
+        <div id="gv-list-view" class="gv-list-view close">
+            <div class="gv-list-view-inner">
+                <!--LIST VIEW HERE-->
+            </div>
+        </div>
+        <div id="gv-grid-view" class="gv-grid-view open">
+            <div class="gv-grid-view-inner">
+                <!--GRID VIEW HERE-->
+                <!-- <div id="gv-filter-block" class="gv-filter-block">
+                    <div class="gv-field">
+                        <label for="gv-player-filter" class="hidden">Show</label>
+                        <select class="field__select-within" id="gv-player-filter" name="gv-player-filter">
+                            <option value="All players" selected="selected">All players</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="gv-grid" id="gv-grid">
+                    {{#players}}
+                    <div class="gv-grid-cell">
+                        <div class="gv-grid-cell-inner">
+                            <div class="gv-grid-cell-image-container"></div>
+                            <div class="gv-cell-info"></div>
+                        </div>
+                    </div>
+                    {{/players}}
+                </div>
+            </div>
+        </div>
+        <div id="gv-fixed-btn-container" class="gv-fixed-btn-container">
+            <div id="toggle-view-overlay-btn" class="toggle-view-overlay-btn">
+                <svg class="gv-toggle-icon" id="gv-list-icon-svg" viewBox="0 0 23 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Artboard-Copy-3" transform="translate(-127.000000, -390.000000)" fill="#fff">
+                            <g id="Group-7" transform="translate(109.000000, 351.000000)">
+                                <g id="Group-Copy" transform="translate(0.000000, 20.000000)">
+                                    <g id="list-icon" transform="translate(18.000000, 19.000000)">
+                                        <polygon id="Fill-1" points="0 2 23 2 23 0 0 0"></polygon>
+                                        <polygon id="Fill-2" points="0 8 23 8 23 6 0 6"></polygon>
+                                        <polygon id="Fill-2-Copy" points="0 14 23 14 23 12 0 12"></polygon>
+                                        <polygon id="Fill-2-Copy-2" points="0 20 23 20 23 18 0 18"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <svg class="gv-toggle-icon" id="gv-grid-icon-svg" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="football-calendar-desktop-main" transform="translate(-127.000000, -388.000000)" fill="#fff">
+                            <g id="Group-8-Copy" transform="translate(110.000000, 371.000000)">
+                                <g id="Grid-icon" transform="translate(17.000000, 17.000000)">
+                                    <polygon id="Rectangle-11" points="0.722473145 0 12 0 12 12 0 12 0 0.725082397"></polygon>
+                                    <polygon id="Rectangle-11-Copy" transform="translate(6.000000, 20.000000) scale(1, -1) translate(-6.000000, -20.000000) " points="0.722473145 14 12 14 12 26 0 26 0 14.7250824"></polygon>
+                                    <polygon id="Rectangle-11-Copy-4" transform="translate(20.000000, 6.000000) scale(-1, 1) translate(-20.000000, -6.000000) " points="14.7224731 0 26 0 26 12 14 12 14 0.725082397"></polygon>
+                                    <polygon id="Rectangle-11-Copy-5" transform="translate(20.000000, 20.000000) scale(-1, -1) translate(-20.000000, -20.000000) " points="14.7224731 14 26 14 26 26 14 26 14 14.7250824"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>

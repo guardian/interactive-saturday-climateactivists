@@ -1,0 +1,46 @@
+<div id="gv-filter-block" class="gv-filter-block">
+    <div class="gv-field">
+        <label for="gv-player-filter" class="hidden">Within</label>
+        <select class="field__select-within" id="gv-player-filter" name="gv-player-filter">
+            <option value="All players" selected="selected">
+                All players</option>
+             <option value="Argentinian">Argentinian</option>
+             <option value="Belgian">Belgian</option>
+                            <option value="Brazilian">Brazilian</option>
+                            <option value="English">English</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Other nationalities">Other nationalities</option>
+                            <option value="Bundesliga">Bundesliga</option>
+                            <option value="La Liga">La Liga</option>
+                            <option value="Premier League">Premier League</option>
+                            <option value="Serie A">Serie A</option>
+                            <option value="Other leagues">Other leagues</option>
+                            <option value="Goalkeepers">Goalkeepers</option>
+                            <option value="Defenders">Defenders</option>
+                            <option value="Midfielders">Midfielders</option>
+                            <option value="Forwards">Forwards</option>
+        </select>
+    </div>
+</div>
+<div class="gv-grid" id="gv-grid">
+    {{#each cells}}
+    <div class="gv-grid-cell {{PublishClass}}" id="gv-grid-cell_{{Index}}" data-index="{{Index}}">
+        <div class="gv-grid-cell-inner" id="gv-grid-cell-inner_{{Index}}" data-index="{{Index}}">
+            <div class="gv-grid-cell-image-container">
+                <img class="gv-grid-cell-image gv-blazy" src="<%= path %>/assets/placeholder.png" data-src="{{Grid_image_src}}" />
+                <!-- <div class="gv-flag gv-grid-cell-flag gv-blazy" data-src="<%= path %>/assets/flags/pngs/{{Iso}}.png"></div> -->
+            </div>
+            <div class="gv-cell-info">
+                <div class="gv-cell-title"><span class="gv-cell-number">{{Rank}}</span>{{Name}}</div>
+                <div class="gv-cell-subtitle">{{Club}}</div>
+            </div>
+            <!-- INSERT CELL STUFF HERE -->
+        </div>
+    </div>
+    <!-- {{#each objArr}} 
+                        {{> detailItem }}
+                    {{/each}}  -->
+    {{/each}}
+</div>
